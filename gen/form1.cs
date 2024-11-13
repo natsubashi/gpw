@@ -12,6 +12,9 @@ public partial class Form1 : Form{
     Panel panel1;
     TextBox textBox1;
     Button button1;
+    GroupBox groupBox1;
+    RadioButton radioButton1;
+    RadioButton radioButton2;
     public Form1(){
         //InitializeComponent();
         CALControls();
@@ -23,7 +26,25 @@ public partial class Form1 : Form{
         this.Controls.Add(panel1 = new Panel{
             Location = new Point(10, 10),
             BackColor = Color.Azure,
-            Size = new Size(300, 100),
+            Size = new Size(300, 200),
+        });
+
+        panel1.Controls.Add(groupBox1 = new GroupBox{
+            Location = new Point(10, 60),
+            Size = new Size(100, 100),
+            Text = "rbBox",
+        });
+
+        groupBox1.Controls.Add(radioButton1 = new RadioButton{
+            Location = new Point(0, 18),
+            Size = new Size(100, 20),
+            Text = "rb1",
+        });
+
+        groupBox1.Controls.Add(radioButton2 = new RadioButton{
+            Location = new Point(0, 40),
+            Size = new Size(100, 20),
+            Text = "rb2",
         });
 
         panel1.Controls.Add(textBox1 = new TextBox{

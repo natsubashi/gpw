@@ -1,5 +1,5 @@
 is_global = true
 build_property.RootNamespace = gen
-build_property.ProjectDir = C:\ws\repos\generalPrintWrapper\gen\
+build_property.ProjectDir = C:\ws\repos\gpw\gpw\gen\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
