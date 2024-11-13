@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gen", "gen\gen.csproj", "{A22111C8-11B0-4343-AE95-FFA5C50EF389}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A22111C8-11B0-4343-AE95-FFA5C50EF389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A22111C8-11B0-4343-AE95-FFA5C50EF389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A22111C8-11B0-4343-AE95-FFA5C50EF389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A22111C8-11B0-4343-AE95-FFA5C50EF389}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
