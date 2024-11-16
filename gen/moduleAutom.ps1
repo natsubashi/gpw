@@ -1,7 +1,7 @@
 Set-StrictMode -Version 2.0
 
-Add-Type -Path .\wrapperkai.cs `
--OutputAssembly wrapper.exe `
+Add-Type -Path .\moduleAutom.cs `
+-OutputAssembly moduleAutom.exe `
 -ReferencedAssemblies `
 System.Windows.Forms,`
 System.Drawing,`
@@ -19,4 +19,4 @@ WindowsBase
 -OutputType WindowsApplication#>
 Write-Host "successwrapper"
 
-.\wrapper.exe
+#.\moduleAutom.exe
