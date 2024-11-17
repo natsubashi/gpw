@@ -5,24 +5,38 @@ namespace moduleAUI {
 
 class Program {
     static void Main(string[] args) {
-        var tgtW = AutomationElement.RootElement.FindFirst(
+        try {
+            AutomationElement tw = FindWindowByName("beInput");
+            if(tw == null) return;
+            AutomationElement te = FindElementByAutomationId(tw, "textBox111");
+            if(te == null) return;
+            SetTextToElement(te, "09d9aAD");
+        }
+        catch(Exception ex) {
+            Console.WriteLine(ex.Message);
+        }
+    }
+
+    static AutomationElement FindWindowByName(string name) {
+        return AutomationElement.RootElement.FindFirst(
             TreeScope.Children,
-            new PropertyCondition(AutomationElement.NameProperty, "beInput"));
-        if(tgtW != null) {
-            AutomationElement tbx = tgtW.FindFirst(
-                TreeScope.Descendants,
-                new PropertyCondition(AutomationElement.AutomationIdProperty, "textBox111"));
+            new PropertyCondition(AutomationElement.NameProperty, name));
+    }
 
-            if(tbx != null) {
-                try {
-                    var valuePattern = tbx.GetCurrentPattern(ValuePattern.Pattern) as ValuePattern;
+    static AutomationElement FindElementByAutomationId(AutomationElement parent, string id) {
+        return parent.FindFirst(
+            TreeScope.Descendants,
+            new PropertyCondition(AutomationElement.AutomationIdProperty, id));
+    }
 
-                    if(valuePattern != null) {
-                        valuePattern.SetValue("aWDA20109873a");
-                    }
-                }
-                catch(Exception ex) { Console.WriteLine(ex); }
-            }
+    static void SetTextToElement(AutomationElement element, string text) {
+        try {
+            var valuePattern = element.GetCurrentPattern(ValuePattern.Pattern) as ValuePattern;
+            if (valuePattern == null) return;
+            valuePattern.SetValue(text);
+        }
+        catch (InvalidOperationException ex) {
+            Console.WriteLine(ex.Message);
         }
     }
 }
